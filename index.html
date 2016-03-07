@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ice Cream Store</title>
+		<link rel="stylesheet" href="styles/bootstrap.css" />
+		<link rel="stylesheet" href="styles/store.css" />
+		<script src="scripts/libs/require.js" data-main="scripts/main"></script>
+	</head>
+	<body>
+		<div id="store-container" class="container">
+			<h1>Welcome to the Ice Cream Store!</h1>
+			<p>Add the number of cones you would like below.</p>
+			<div id="store">
+				<form class="form-inline" role="form">
+					<div class="form-group">
+						<label for="add-cone-number" class="control-label">Cones:</label>
+						<input type="number" id="add-cone-number" class="form-control" value="0" />
+					</div>
+					<button type="button" id="add-cones" class="btn btn-primary">Add Cones</button>
+					<span id="total-cost">Total Cost: $0.00</span>
+				</form>
+			</div>
+		</div>
+		<script type="text/template" id="cone-template">
+			<form class="form-inline" role="form">
+				<div class="form-group cone-label">
+					<label class="control-label">Cone Type:</label>
+					<select class="form-control cone-type">
+						<option value="Cup" <%= type == 'Cup' ? 'selected' : '' %>>Cup</option>
+						<option value="Cone" <%= type == 'Cone' ? 'selected' : '' %>>Cone</option>
+						<option value="Waffle Cone" <%= type == 'Waffle Cone' ? 'selected' : '' %>>Waffle Cone</option>
+					</select>
+				</div>
+				<button type="button" class="btn btn-default add-scoop">Add Scoop</button>
+				<button type="button" class="close remove-cone" aria-hidden="true">
+					<span class="glyphicon glyphicon-remove-sign"></span>
+				</button>
+			</form>
+		</script>
+		<script type="text/template" id="scoop-template">
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<label class="control-label">Scoop Flavor:</label>
+					<select class="form-control scoop-type">
+						<option value="Vanilla" <%= flavor == 'Vanilla' ? 'selected' : '' %>>Vanilla</option>
+						<option value="Chocolate" <%= flavor == 'Chocolate' ? 'selected' : '' %>>Chocolate</option>
+						<option value="Strawberry" <%= flavor == 'Strawberry' ? 'selected' : '' %>>Strawberry</option>
+					</select>
+				</div>
+				<button type="button" class="close remove-scoop" aria-hidden="true">
+					<span class="glyphicon glyphicon-remove-sign"></span>
+				</button>
+			</form>
+		</script>
+	</body>
+</html>

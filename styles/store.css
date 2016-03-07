@@ -1,0 +1,79 @@
+/*
+ * Store View styles
+ */
+
+ #store {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-bottom: 20px;
+	background-color: #F8F8F8;
+	border-radius: 5px;
+}
+
+#add-cone-number {
+	width: 80px;
+}
+
+#total-cost {
+	padding-left: 20px;
+	font-weight: bold;
+	line-height: 2.5;
+	float: right;
+}
+
+/*
+ * Cone View styles
+ */
+
+.cone {
+	padding: 10px;
+	background-color: #F8F8F8;
+}
+
+.cone-label {
+	padding-left: 10px;
+}
+
+.remove-cone {
+	margin-right: 10px;	
+}
+
+/*
+ * Scoop View styles
+ */
+
+.scoop {
+	padding: 10px;
+}
+
+.vanilla {
+	background-color: #FFFFE6;
+}
+
+.chocolate {
+	background-color: #CCC2B8;
+}
+
+.strawberry {
+	background-color: #FFE6F3;
+}
+
+/*
+ * Shared Cone and Scoop View styles
+ */
+
+.cone, .scoop {
+	margin-top: 10px;
+	border-radius: 5px;
+}
+
+.cone-type, .scoop-type {
+	width: 130px
+}
+
+.remove-cone, .remove-scoop {
+	vertical-align: middle;
+	line-height: 2;
+}
